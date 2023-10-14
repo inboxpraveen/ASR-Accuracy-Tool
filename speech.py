@@ -11,6 +11,20 @@ from transformers import (
 )
 
 def load_model_and_tokenizer(model_name):
+    """
+    Load a pre-trained speech-to-text model and its corresponding tokenizer.
+
+    Parameters:
+    - model_name (str): The name of the pre-trained model to load. Should contain either 'whisper' or 'wav2vec2'.
+
+    Returns:
+    - model: The pre-trained model.
+    - tokenizer or processor: Tokenizer or processor depending on the model.
+    - device (torch.device): The device ('cuda' or 'cpu') the model will run on.
+
+    Example:
+    >>> model, tokenizer, device = load_model_and_tokenizer("whisper-tiny")
+    """
     try:
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         if "whisper" in model_name:
@@ -46,7 +60,22 @@ MODEL_MAPPING = {
 
 
 def transcribe(model, tokenizer, device, input_path, model_name = "whisper-tiny"):
+    """
+    Transcribe an audio file into text using a pre-trained model and tokenizer.
 
+    Parameters:
+    - model: The pre-trained model.
+    - tokenizer: The corresponding tokenizer or processor.
+    - device (torch.device): The device the model will run on.
+    - input_path (str): The path to the audio file to be transcribed.
+    - model_name (str): The name of the pre-trained model used for transcription. Default is 'whisper-tiny'.
+
+    Returns:
+    - transcription (str): The transcribed text.
+
+    Example:
+    >>> transcription = transcribe(model, tokenizer, device, "sample.wav", "whisper-tiny")
+    """
     waveform, rate = torchaudio.load(input_path, normalize=True)
     transcription = ""
     

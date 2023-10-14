@@ -242,6 +242,25 @@ def results():
 
 @app.route('/get-progress', methods=['GET'])
 def get_progress():
+    """
+    A Flask API endpoint that retrieves the progress of a long-running task.
+    It calculates the progress as the percentage of processed files against the total files.
+    Stores and fetches these metrics from a Redis database.
+
+    Request Method: 
+    - GET
+
+    Returns:
+    - JSON: A JSON object containing the 'progress' as a percentage. Returns 0 if 'total_files' is zero.
+
+    Example:
+    GET request to '/get-progress'
+    If Redis stores total_files as 10 and processed_files as 5, then the returned JSON will be:
+    {"progress": 50.0}
+
+    Debug:
+    Logs the current state (total_files and processed_files) and progress to the console.
+    """
     print("Called GET PROGRESS API Backend")
     total_files = int(redis.get('total_files') or 0)
     processed_files = int(redis.get('processed_files') or 0)
