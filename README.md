@@ -1,5 +1,5 @@
 # ASR-Accuracy-Tool :speaker: 
-<img src="static/images/logo4.png" />
+<img src="static/images/ASR Tool Image.png" />
 
 🎙️ A powerful Flask-based web application that leverages the latest Hugging Face ASR models to provide real-time speech-to-text (STT) transcripts with an intuitive user interface for easy correction. Perfect for enhancing the quality of training datasets for ASR models, building awesome NLP Application driving by Accurate text data, and much more. 
 
