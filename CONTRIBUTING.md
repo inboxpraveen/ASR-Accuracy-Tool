@@ -1,6 +1,6 @@
-# Contributing to Speech Annotation Workbench
+# Contributing to Speech Annotation Tool
 
-Thank you for considering contributing to the Speech Annotation Workbench! We welcome contributions from the community.
+Thank you for considering contributing to the Speech Annotation Tool! We welcome contributions from the community.
 
 ## Code of Conduct
 
@@ -35,8 +35,8 @@ Be respectful, inclusive, and considerate. We're building this together.
 
 ```bash
 # Fork and clone the repository
-git clone https://github.com/inboxpraveen/Speech-Annotation-Workbench.git
-cd Speech-Annotation-Workbench
+git clone https://github.com/inboxpraveen/Speech-Annotation-Tool.git
+cd Speech-Annotation-Tool
 
 # Create virtual environment
 python -m venv venv
@@ -304,7 +304,7 @@ Looking for something to work on? Consider:
 
 ## Questions?
 
-Don't hesitate to ask! Open an issue at [https://github.com/inboxpraveen/Speech-Annotation-Workbench/issues](https://github.com/inboxpraveen/Speech-Annotation-Workbench/issues)
+Don't hesitate to ask! Open an issue at [https://github.com/inboxpraveen/Speech-Annotation-Tool/issues](https://github.com/inboxpraveen/Speech-Annotation-Tool/issues)
 
 ---
 

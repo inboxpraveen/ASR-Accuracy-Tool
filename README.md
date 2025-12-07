@@ -1,4 +1,4 @@
-# Speech Annotation Workbench
+# Speech Annotation Tool
 
 > Transcription review and correction platform with background processing, progress tracking, and session persistence
 
@@ -55,8 +55,8 @@ A powerful, user-friendly web application for reviewing and correcting ASR (Auto
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/inboxpraveen/Speech-Annotation-Workbench.git
-cd Speech-Annotation-Workbench
+git clone https://github.com/inboxpraveen/Speech-Annotation-Tool.git
+cd Speech-Annotation-Tool
 
 # 2. Create a virtual environment
 python -m venv venv
@@ -227,7 +227,7 @@ Prevent accidental overwrites:
 ## 📊 Project Structure
 
 ```
-Speech-Annotation-Workbench/
+Speech-Annotation-Tool/
 ├── app.py                 # Entry point
 ├── requirements.txt       # Dependencies
 ├── README.md              # This file
@@ -446,7 +446,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Need help? Have questions?
 
-- **Issues**: [GitHub Issues](https://github.com/inboxpraveen/Speech-Annotation-Workbench/issues)
+- **Issues**: [GitHub Issues](https://github.com/inboxpraveen/Speech-Annotation-Tool/issues)
 - **Documentation**: [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)
 
 ---

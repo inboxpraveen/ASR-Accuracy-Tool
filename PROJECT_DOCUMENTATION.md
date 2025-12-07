@@ -1,4 +1,4 @@
-# Speech Annotation Workbench - Technical Documentation
+# Speech Annotation Tool - Technical Documentation
 
 > Complete technical documentation for developers, maintainers, and contributors
 
@@ -22,7 +22,7 @@
 
 ### High-Level Architecture
 
-The Speech Annotation Workbench is built as a modern web application with a clean separation of concerns:
+The Speech Annotation Tool is built as a modern web application with a clean separation of concerns:
 
 ![Architecture](./static/images/Architecture.png)
 
@@ -41,7 +41,7 @@ The Speech Annotation Workbench is built as a modern web application with a clea
 ### Directory Structure
 
 ```
-Speech-Annotation-Workbench/
+Speech-Annotation-Tool/
 ├── app.py                          # Application entry point
 ├── requirements.txt                # Python dependencies
 ├── README.md                       # High-level overview
@@ -629,8 +629,8 @@ The current threading-based approach is sufficient for most use cases and keeps 
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/Speech-Annotation-Workbench.git
-cd Speech-Annotation-Workbench
+git clone https://github.com/yourusername/Speech-Annotation-Tool.git
+cd Speech-Annotation-Tool
 
 # Create virtual environment
 python -m venv venv
@@ -668,12 +668,12 @@ gunicorn -w 4 -b 0.0.0.0:5000 app:app
 Create `/etc/systemd/system/asr-tool.service`:
 ```ini
 [Unit]
-Description=Speech Annotation Workbench
+Description=Speech Annotation Tool
 After=network.target
 
 [Service]
 User=youruser
-WorkingDirectory=/path/to/Speech-Annotation-Workbench
+WorkingDirectory=/path/to/Speech-Annotation-Tool
 Environment="PATH=/path/to/venv/bin"
 Environment="FLASK_SECRET_KEY=your-secret-key"
 ExecStart=/path/to/venv/bin/gunicorn -w 4 -b 127.0.0.1:5000 app:app
@@ -887,7 +887,7 @@ We welcome contributions! Please:
 
 For issues, questions, or contributions:
 
-- **GitHub Issues**: [https://github.com/inboxpraveen/Speech-Annotation-Workbench/issues](https://github.com/inboxpraveen/Speech-Annotation-Workbench/issues)
+- **GitHub Issues**: [https://github.com/inboxpraveen/Speech-Annotation-Tool/issues](https://github.com/inboxpraveen/Speech-Annotation-Tool/issues)
 - **Documentation**: This file
 
 ---

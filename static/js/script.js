@@ -1,5 +1,5 @@
 /**
- * Speech Annotation Workbench - Frontend Application
+ * Speech Annotation Tool - Frontend Application
  * Handles job management, progress tracking, localStorage persistence, and record locking
  */
 

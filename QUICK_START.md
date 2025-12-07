@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Get the Speech Annotation Workbench running in 5 minutes.
+Get the Speech Annotation Tool running in 5 minutes.
 
 ## Prerequisites
 
@@ -12,8 +12,8 @@ Get the Speech Annotation Workbench running in 5 minutes.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/inboxpraveen/Speech-Annotation-Workbench.git
-cd Speech-Annotation-Workbench
+git clone https://github.com/inboxpraveen/Speech-Annotation-Tool.git
+cd Speech-Annotation-Tool
 
 # 2. Create virtual environment
 python -m venv venv
@@ -117,5 +117,5 @@ python app.py --port 8000
 
 ## Support
 
-- Issues: https://github.com/inboxpraveen/Speech-Annotation-Workbench/issues
+- Issues: https://github.com/inboxpraveen/Speech-Annotation-Tool/issues
 - Documentation: [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)
