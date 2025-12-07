@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Get the ASR Accuracy Tool running in 5 minutes.
+Get the Speech Annotation Workbench running in 5 minutes.
 
 ## Prerequisites
 
@@ -12,8 +12,8 @@ Get the ASR Accuracy Tool running in 5 minutes.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/inboxpraveen/ASR-Accuracy-Tool.git
-cd ASR-Accuracy-Tool
+git clone https://github.com/inboxpraveen/Speech-Annotation-Workbench.git
+cd Speech-Annotation-Workbench
 
 # 2. Create virtual environment
 python -m venv venv
@@ -117,5 +117,5 @@ python app.py --port 8000
 
 ## Support
 
-- Issues: https://github.com/inboxpraveen/ASR-Accuracy-Tool/issues
+- Issues: https://github.com/inboxpraveen/Speech-Annotation-Workbench/issues
 - Documentation: [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)

@@ -1,5 +1,5 @@
 /**
- * ASR Accuracy Tool - Frontend Application
+ * Speech Annotation Workbench - Frontend Application
  * Handles job management, progress tracking, localStorage persistence, and record locking
  */
 
