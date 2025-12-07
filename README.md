@@ -8,7 +8,7 @@
 
 A powerful, user-friendly web application for reviewing and correcting ASR (Automatic Speech Recognition) transcriptions. Built for data annotation teams, researchers, and anyone working with speech-to-text accuracy improvement.
 
-![ASR Accuracy Tool](static/images/ASR%20Tool%20Image.png)
+![Header](./static/images/Header.png)
 
 ---
 
@@ -42,6 +42,8 @@ A powerful, user-friendly web application for reviewing and correcting ASR (Auto
 ## 🎬 Quick Start
 
 > **TL;DR**: See [QUICK_START.md](QUICK_START.md) for a 5-minute setup guide.
+
+![Dashboard](./static/images/Application-Dashboard.png)
 
 ### Prerequisites
 
