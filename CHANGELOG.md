@@ -7,9 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.0] - 2025-12-07
 
-### 🎉 Major Release - Complete Overhaul
+### 🎉 Major Release
 
-This is a complete rewrite of the ASR Accuracy Tool with professional-grade features, modern UI, and production-ready architecture.
+Enhanced ASR Accuracy Tool with background processing, modern UI, and comprehensive documentation.
 
 ### Added
 
@@ -159,9 +159,11 @@ This is a complete rewrite of the ASR Accuracy Tool with professional-grade feat
 - [ ] Docker and Docker Compose support
 - [ ] Kubernetes deployment templates
 - [ ] Redis caching layer
-- [ ] Celery for distributed job processing
+- [ ] Celery integration for distributed job processing (currently uses threading)
 - [ ] S3 integration for audio storage
 - [ ] API token authentication
+
+**Note**: Background jobs currently use Python threading, which is suitable for most deployments. Celery integration is planned for high-volume distributed processing scenarios.
 
 ### [3.0.0] - Future
 

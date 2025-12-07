@@ -622,6 +622,22 @@ if not candidate.exists():
 4. **File size limits**: Prevent DoS via large uploads
 5. **Database migration**: Move from CSV to PostgreSQL for multi-user
 
+### Background Job Processing
+
+**Current Implementation**: Python Threading
+- Jobs run in daemon threads using Python's built-in `threading` module
+- Suitable for single-server deployments
+- No additional dependencies or services required
+- Jobs are isolated and don't block the main application
+
+**For Distributed Processing**: Consider migrating to Celery in future
+- Celery with Redis/RabbitMQ for message broker
+- Supports multiple workers across multiple servers
+- Better for high-volume production environments
+- Requires additional infrastructure setup
+
+The current threading-based approach is sufficient for most use cases and keeps the deployment simple.
+
 ---
 
 ## Deployment Guide
@@ -842,9 +858,30 @@ kill -9 <PID>
 3. **Segment Size**: Adjust segment duration (default 30s)
 4. **Concurrent Jobs**: Increase if resources allow
 
+### Background Job Processing: Threading vs Celery
+
+**Current Implementation (Threading)**:
+- Uses Python's built-in `threading` module
+- No additional services required
+- Perfect for single-server deployments
+- Easy to deploy and maintain
+- Suitable for most use cases
+
+**Future: Celery Migration** (for distributed processing):
+- Requires Redis or RabbitMQ as message broker
+- Supports multiple workers across servers
+- Better for high-volume production environments
+- More complex infrastructure requirements
+
+**When to migrate to Celery**:
+- Processing >1000 files per hour
+- Need to scale horizontally across multiple servers
+- Require advanced job scheduling features
+- Need job result persistence beyond current session
+
 ### Database Migration
 
-For >10,000 records, migrate to SQLite:
+For >10,000 records, consider migrating to SQLite:
 
 ```python
 # Replace storage.py with SQLite backend
@@ -887,9 +924,8 @@ We welcome contributions! Please:
 
 For issues, questions, or contributions:
 
-- **GitHub Issues**: [Link to issues]
+- **GitHub Issues**: [https://github.com/inboxpraveen/ASR-Accuracy-Tool/issues](https://github.com/inboxpraveen/ASR-Accuracy-Tool/issues)
 - **Documentation**: This file
-- **Email**: [Your contact email]
 
 ---
 

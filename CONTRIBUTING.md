@@ -35,7 +35,7 @@ Be respectful, inclusive, and considerate. We're building this together.
 
 ```bash
 # Fork and clone the repository
-git clone https://github.com/your-username/ASR-Accuracy-Tool.git
+git clone https://github.com/inboxpraveen/ASR-Accuracy-Tool.git
 cd ASR-Accuracy-Tool
 
 # Create virtual environment
@@ -304,7 +304,7 @@ Looking for something to work on? Consider:
 
 ## Questions?
 
-Don't hesitate to ask! Open an issue with the `question` label.
+Don't hesitate to ask! Open an issue at [https://github.com/inboxpraveen/ASR-Accuracy-Tool/issues](https://github.com/inboxpraveen/ASR-Accuracy-Tool/issues)
 
 ---
 

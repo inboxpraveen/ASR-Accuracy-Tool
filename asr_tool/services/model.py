@@ -14,7 +14,7 @@ class ModelError(Exception):
 def load_model(model_name: str) -> Tuple[WhisperForConditionalGeneration, WhisperProcessor, torch.device]:
     """
     Cached model loader to keep memory footprint predictable.
-    Using lru_cache avoids reloading per task and plays well with Celery workers.
+    Using lru_cache avoids reloading model between tasks.
     """
     if not model_name or not isinstance(model_name, str):
         raise ModelError(f"Invalid model name: {model_name}")

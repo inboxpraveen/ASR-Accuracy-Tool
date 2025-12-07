@@ -1,6 +1,6 @@
 # ASR Accuracy Tool
 
-> **Professional transcription review and correction platform with background processing, progress tracking, and session persistence**
+> Transcription review and correction platform with background processing, progress tracking, and session persistence
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![Flask](https://img.shields.io/badge/Flask-3.0%2B-green.svg)](https://flask.palletsprojects.com/)
@@ -41,6 +41,8 @@ A powerful, user-friendly web application for reviewing and correcting ASR (Auto
 
 ## 🎬 Quick Start
 
+> **TL;DR**: See [QUICK_START.md](QUICK_START.md) for a 5-minute setup guide.
+
 ### Prerequisites
 
 - **Python 3.10+**
@@ -51,7 +53,7 @@ A powerful, user-friendly web application for reviewing and correcting ASR (Auto
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/ASR-Accuracy-Tool.git
+git clone https://github.com/inboxpraveen/ASR-Accuracy-Tool.git
 cd ASR-Accuracy-Tool
 
 # 2. Create a virtual environment
@@ -199,12 +201,15 @@ localStorage.removeItem('asr_corrections_tracker');
 
 ### Background Processing
 
-Jobs run in separate threads:
+Jobs run in separate threads using Python's built-in threading:
 
 - UI remains responsive during long operations
 - Progress updates every 2 seconds
 - Only one job per type can run (prevents conflicts)
 - Jobs survive brief network interruptions
+- **No additional services required** (no Redis, RabbitMQ, or Celery)
+
+For distributed processing across multiple servers, consider migrating to Celery. See [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md) for details.
 
 ### Row Locking
 
@@ -345,13 +350,15 @@ docker run -p 5000:5000 -v $(pwd)/data:/app/data asr-tool
 
 ## 📚 Documentation
 
+- **[QUICK_START.md](QUICK_START.md)**: 5-minute setup guide
 - **[PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)**: Complete technical documentation
   - Architecture details
   - API reference
+  - Background job processing (Threading vs Celery)
   - Development guide
   - Deployment instructions
   - Troubleshooting
-
+- **[CONTRIBUTING.md](CONTRIBUTING.md)**: Contribution guidelines
 - **In-Code Documentation**: All functions have detailed docstrings
 
 ---
@@ -411,8 +418,10 @@ flake8 asr_tool/ --max-line-length 100
 
 - [ ] Database migration to PostgreSQL
 - [ ] Redis caching layer
-- [ ] Celery for distributed job processing
+- [ ] Celery integration for distributed job processing (currently uses Python threading)
 - [ ] S3 integration for audio storage
+
+**Note**: The current version uses Python's built-in threading for background jobs. Celery integration is planned for future releases to support distributed processing across multiple workers.
 
 ---
 
@@ -435,9 +444,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Need help? Have questions?
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/ASR-Accuracy-Tool/issues)
+- **Issues**: [GitHub Issues](https://github.com/inboxpraveen/ASR-Accuracy-Tool/issues)
 - **Documentation**: [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)
-- **Email**: your.email@example.com
 
 ---
 
